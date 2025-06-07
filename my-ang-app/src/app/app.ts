@@ -60,9 +60,16 @@ export class App {
   onAction(type: 'Insert' | 'Update' | 'Cancel') {
   this.transactionForm.patchValue({ actionType: type });
   var urlVar = 'http://localhost:8080/addTransaction';
+  if (type === 'Update') {
+    urlVar = 'http://localhost:8080/updateTransaction';
+  } else if (type === 'Cancel') {
+    urlVar = 'http://localhost:8080/cancelTransaction';
+  }
+
+    // Validate the form before submission
   if (this.transactionForm.valid) {
       const formData = this.transactionForm.value;
-      fetch('http://localhost:8080/addTransaction', {
+      fetch(urlVar, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -80,6 +87,7 @@ export class App {
     } else {
       this.transactionForm.markAllAsTouched();
     }
+    this.transactionForm.reset();
     this.showModal = false;
   }
 }
