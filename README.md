@@ -1,0 +1,2 @@
+# Trafigura
+Application for trades
