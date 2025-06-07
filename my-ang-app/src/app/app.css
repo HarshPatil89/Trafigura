@@ -1,0 +1,201 @@
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+
+h1 {
+  text-align: center;
+  color: #2d3e50;
+  margin-bottom: 30px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  background: #f8fafc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.styled-table th, .styled-table td {
+  padding: 14px 22px;
+  border-bottom: 1px solid #e3e7ed;
+  text-align: left;
+  font-size: 1.08em;
+}
+
+.styled-table th {
+  background: #2448a6;
+  color: #fff;
+}
+
+.styled-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.fancy-btn {
+  background: linear-gradient(90deg, #2448a6 0%, #39c7f6 100%);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 16px 5px;
+  transition: background 0.2s;
+}
+
+.fancy-btn:hover {
+  background: linear-gradient(90deg, #39c7f6 0%, #2448a6 100%);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(40, 54, 89, 0.40);
+  z-index: 99;
+}
+
+.modal-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 34px 30px 26px 30px;
+  border-radius: 16px;
+  box-shadow: 0;
+  z-index: 99;
+}
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.form-row .form-label {
+  flex: 0 0 140px;
+  text-align: left;
+  font-weight: 600;
+  color: #3a3a3a;
+  letter-spacing: 0.03em;
+  font-size: 1.04em;
+}
+
+.form-row .fancy-input,
+.form-row select {
+  flex: 1 1 auto;
+  padding: 10px 14px;
+  border: 1.5px solid #bdd6fd;
+  border-radius: 7px;
+  font-size: 1em;
+  background: #f7faff;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-shadow: 0 1px 2px #e1ecfb inset;
+}
+
+.form-row .fancy-input:focus,
+.form-row select:focus {
+  border: 1.5px solid #2261d1;
+  box-shadow: 0 0 6px #b6d2fc;
+  background: #fff;
+}
+
+.form-row .input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-row .input-icon .icon {
+  position: absolute;
+  left: 12px;
+  color: #2261d1;
+  font-size: 1.1em;
+  pointer-events: none;
+}
+
+.form-row .input-icon input {
+  padding-left: 32px;
+}
+.fancy-input,
+select.fancy-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #bdd6fd;
+  border-radius: 7px;
+  font-size: 1em;
+  background: #f7faff;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-shadow: 0 1px 2px #e1ecfb inset;
+}
+
+.fancy-input:focus,
+select.fancy-input:focus {
+  border: 1.5px solid #2261d1;
+  box-shadow: 0 0 6px #b6d2fc;
+  background: #fff;
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-icon .icon {
+  position: absolute;
+  left: 12px;
+  color: #2261d1;
+  font-size: 1.1em;
+  pointer-events: none;
+}
+
+.input-icon input.fancy-input {
+  padding-left: 32px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.modal-actions button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  background: #2261d1;
+  color: #fff;
+  transition: background 0.16s, box-shadow 0.16s;
+  font-weight: 500;
+  box-shadow: 0 1px 4px #dae6fa90;
+}
+.modal-actions button.selected {
+  background: #1a4a96;
+  box-shadow: 0 2px 8px #bdd6fd55;
+}
+.modal-actions .close-btn-out {
+  background: #aaa;
+  color: #fff;
+}
+.modal-actions button:disabled {
+  background: #b0cff7;
+  cursor: not-allowed;
+}

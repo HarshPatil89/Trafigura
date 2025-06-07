@@ -1,0 +1,264 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --pill-accent: var(--bright-blue);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+
+  .angular-logo {
+    max-width: 9.2rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .content h1 {
+    margin-top: 1.75rem;
+  }
+
+  .content p {
+    margin-top: 1.5rem;
+  }
+
+  .divider {
+    width: 1px;
+    background: var(--red-to-pink-to-purple-vertical-gradient);
+    margin-inline: 0.5rem;
+  }
+
+  .pill-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--bright-blue);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    transition: background 0.3s ease;
+    font-family: var(--inter-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+  }
+
+  .pill:hover {
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+  }
+
+  .pill-group .pill:nth-child(6n + 1) {
+    --pill-accent: var(--bright-blue);
+  }
+  .pill-group .pill:nth-child(6n + 2) {
+    --pill-accent: var(--french-violet);
+  }
+  .pill-group .pill:nth-child(6n + 3),
+  .pill-group .pill:nth-child(6n + 4),
+  .pill-group .pill:nth-child(6n + 5) {
+    --pill-accent: var(--hot-red);
+  }
+
+  .pill-group svg {
+    margin-inline-start: 0.25rem;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links a:hover svg path {
+    fill: var(--gray-900);
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }
+</style>
+
+<main class="main">
+  <div class="content">
+    <div class="left-side">
+      <svg xmlns="http://www.w3.org/2000/svg" width="306" height="107" viewBox="0 0 114 39">
+        <path fill="#049" d="M16.31 27.02v4.09h1.6c1.34 0 2.12-.89 2.12-2.07 0-1.08-.68-2.02-2.26-2.02H16.3zm5.06 11.06c-1.83-2.94-2.96-4.8-3.55-5.06h-1.5v5.06H14V25h3.85c3.33 0 4.6 1.78 4.6 3.74 0 1.56-1 2.83-2.5 3.39v.03c.54.32 2.2 2.93 4.11 5.92h-2.69zm10.41-7.7c-.3-.8-.54-1.45-.67-1.96h-.03c-.13.5-.35 1.13-.67 1.96l-1 2.72h3.4l-1.03-2.72zm3.04 7.75-1.3-3.1h-4.84l-1.2 3.1H25L30.4 25h1.49l5.4 13.13h-2.47zm13.39-11.11h-4.9v3.58h4.85v1.99H43.3v5.49H41V25h7.91zM52.6 38.1h2.31V25H52.6zm13 .48c-3.66 0-6.51-2.55-6.51-6.6C59 28 61.77 25 66.16 25c1.48 0 2.53.24 3.66.7l-.03 2.2a7.24 7.24 0 0 0-3.36-.94c-3.53 0-5 2.4-5 4.85 0 2.93 2.04 4.81 4.49 4.81a7 7 0 0 0 1.99-.27v-4.57h2.28v5.7a9.76 9.76 0 0 1-4.68 1.08m18.01-1.61c-1.05 1.02-2.63 1.4-4.3 1.4-1.59 0-2.96-.36-3.88-1.19-.86-.78-1.34-1.94-1.34-3.5V25h2.31v8.64c0 .91.3 1.61.81 2.04.54.49 1.32.7 2.2.7 1.06 0 1.92-.21 2.48-.73.49-.43.73-1.07.73-1.93V25h2.31v8.4c0 1.64-.51 2.77-1.32 3.55m7.8-9.93v4.09h1.58c1.35 0 2.13-.89 2.13-2.07 0-1.08-.68-2.02-2.26-2.02H91.3zm5.05 11.06c-1.83-2.94-2.96-4.8-3.55-5.06h-1.5v5.06H89V25h3.85c3.33 0 4.6 1.78 4.6 3.74 0 1.56-1 2.83-2.5 3.39v.03c.53.32 2.2 2.93 4.11 5.92h-2.69zm11.41-7.7c-.3-.8-.54-1.45-.67-1.96h-.03c-.13.5-.35 1.13-.67 1.96l-1 2.72h3.4l-1.03-2.72zm3.04 7.75-1.3-3.1h-4.83l-1.22 3.1H101L106.4 25h1.49l5.4 13.13h-2.47zM42.3 2.03A32.27 32.27 0 0 1 48.11.49 36.16 36.16 0 0 1 54.03 0c3.83 0 7.45.67 11.32 2.02.18.06.3.29.3.49a.52.52 0 0 1-.3.44c-.1.05-1.45.62-3.25 2.08a19.98 19.98 0 0 0-3.41 3.55c-.72.98-2.87 3.6-3.97 9.2a29.1 29.1 0 0 0-.43 5c0 .24-.24.38-.47.37-.24 0-.46-.13-.46-.37 0-.05.02-1.1-.1-2.55a22.45 22.45 0 0 0-.34-2.45 24.83 24.83 0 0 0-.53-2.28 20.54 20.54 0 0 0-3.43-6.93c-.79-1.01-1.42-1.86-3.4-3.53a17.7 17.7 0 0 0-3.22-2.09c-.26-.11-.34-.29-.34-.46 0-.22.16-.43.29-.46M0 25v2.02h4.04v11.06h2.3V27.02h3.86l.56-2.02z"/>
+      </svg>
+      <h1>Angular Trading App</h1>
+      <p>Manage your trading positions with ease.</p>
+      
+    </div>
+    <div class="divider" role="separator" aria-label="Divider"></div>
+    <div class="right-side">
+      <div class="container">
+  <h1>Positions</h1>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pos of positions">
+        <td>{{ pos.name }}</td>
+        <td>{{ pos.value }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="fancy-btn" (click)="openModal()">Add Transaction</button>
+
+  <!-- Modal Popup -->
+  <div class="modal-backdrop" *ngIf="showModal" (click)="closeModal()"></div>
+  <div class="modal-box" *ngIf="showModal">
+    <h2>Enter Transaction Details</h2>
+    <form [formGroup]="transactionForm" (ngSubmit)="submitForm()">
+    
+      <div class="form-row">
+        <label class="form-label">TradeID</label>
+        <input class="fancy-input" formControlName="tradeId" type="text" />
+      </div>
+
+      <div class="form-row">
+        <label class="form-label">SecurityCode</label>
+        <select class="fancy-input" formControlName="securityCode">
+          <option>REL</option>
+          <option>ITC</option>
+          <option>INF</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label class="form-label">Quantity</label>
+        <input class="fancy-input" formControlName="quantity" type="number" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">Buy/Sell</label>
+        <select class="fancy-input" formControlName="buySell">
+          <option>Buy</option>
+          <option>Sell</option>
+        </select>
+      </div>
+      <div class="form-actions">
+          <button type="button" class="fancy-btn submit-btn" (click)="onAction('Insert')" [class.selected]="transactionForm.value.actionType === 'Insert'">Insert</button>
+          <button type="button" class="fancy-btn submit-btn" (click)="onAction('Update')" [class.selected]="transactionForm.value.actionType === 'Update'">Update</button>
+          <button type="button" class="fancy-btn submit-btn" (click)="onAction('Cancel')" [class.selected]="transactionForm.value.actionType === 'Cancel'">Cancel</button>
+          <button type="button" class="fancy-btn submit-btn" (click)="closeModal()">Close</button>
+      </div>
+    </form>
+  </div>
+</div>
+      
+    </div>
+  </div>
+</main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet />
